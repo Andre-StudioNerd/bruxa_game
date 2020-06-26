@@ -1,61 +1,39 @@
-class Personagem{
-  constructor(imagem){
-    this.altura = 135;
-    this.largura = 110;
-    
-    // Caracteristicas do sprite utilizado
-    this.imagem = imagem;      // Sprite utilizado
-    this.spriteAltura = 270;   // Altura do personagem dentro do sprite
-    this.spriteLargura = 220;  // Largura do personagem dentro do sprite
-    // Variaveis auxiliares para o sprite
-    this.spriteI = 0;          // Index de coluna 
-    this.spriteJ = 0;          // Index de linha
-    //Posições dentro do sprite
-    this.posicapSpriteX = 0;
-    this.posicaoSpriteY = 0;
-    
-    // Posicionamento na tela
-    this.posicaoX = 0;
-    this.posicaoY = height - this.altura;
-  
-  
-  }
-  exibe(){
-    image(this.imagem,
-          
-      this.posicaoX, 
-      this.posicaoY, 
-      this.largura, 
-      this.altura,
-      
-      this.posicaoSpriteX, 
-      this.posicaoSpriteY, 
-      this.spriteLargura, 
-      this.spriteAltura
-     );
+class Personagem extends Animacao {
+  constructor(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite) {
+    super(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite);
 
-this.anima()
-    
+    this.variacaoY = variacaoY
+    this.yInicial = height - this.altura - this.variacaoY;
+    this.y = this.yInicial;
+
+    this.velocidadeDoPulo = 0;
+    this.gravidade = 6;
+    this.alturaDoPulo = -50
+    this.pulos = 0
   }
-  anima(){
-    this.spriteI++ ;
-    
-    if (this.spriteI >3) {
-      this.spriteI = 0;
-      this.spriteJ ++ ;
-      
-      if (this.spriteJ >3){
-        this.spriteJ = 0;  
-        }
-      }
-  
-    // Atualiza a posição inicial dentro do sprite
-    this.posicaoSpriteX = this.spriteI * this.spriteLargura;
-    this.posicaoSpriteY = this.spriteJ * this.spriteAltura;
-      
-       
-       
-       
-  
+
+  pula() {
+    if (this.pulos < 2)
+      this.velocidadeDoPulo = this.alturaDoPulo
+    this.pulos++
+  }
+
+  aplicaGravidade() {
+    this.y = this.y + this.velocidadeDoPulo
+    this.velocidadeDoPulo = this.velocidadeDoPulo + this.gravidade
+
+    if (this.y > this.yInicial) {
+      this.y = this.yInicial
+      this.pulos = 0
+    }
+  }
+
+  estaColidindo(inimigo) {
+
+    const precisao = .7
+
+    const colisao = collideRectRect(this.x, this.y, this.largura * precisao, this.altura * precisao, inimigo.x, inimigo.y, inimigo.largura * precisao, inimigo.altura * precisao);
+
+    return colisao;
   }
 }
