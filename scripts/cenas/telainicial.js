@@ -20,10 +20,10 @@ class TelaInicial {
     stroke(color("#FFF"));
     strokeWeight(6);
     fill(color('#740093'));
-    text('As aventuras de',width/2,(height/5)*1.5);
+    text('',width/2,(height/5)*1.5);
     textSize(80);
     textAlign(CENTER,CENTER);
-    text('HIPSTA',width/2,(height/5)*1.5+60);
+    text('',width/2,(height/5)*1.5+60);
     
     strokeWeight(3);
     image(controles, width/2-50,(height/11)*7.8, 100, 75);
