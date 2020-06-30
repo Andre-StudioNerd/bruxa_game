@@ -38,7 +38,7 @@ class TelaInicial {
   }
   
   _botao(){
-    botaoGerenciador.posY = height/7*4;
+    botaoGerenciador.posY = height/7*5;
     botaoGerenciador.draw();
   }
 }

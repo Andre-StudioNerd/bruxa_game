@@ -1,6 +1,6 @@
 function preload() {
   /*** TELA INICIAL - SPLASH ***/
-  imagemSplash = loadImage('imagens/cenario/splash/background.png');
+  //imagemSplash = loadImage('imagens/cenario/splash/background.png');
   controles = loadImage('imagens/cenario/splash/arrows.png');
   imagemTelaInicial = loadImage('imagens/cenario/telavs.png');
   fontPrincipal = loadFont('imagens/assets/fonteTelaInicial.otf');
@@ -22,7 +22,7 @@ function preload() {
   gc = loadSound('sons/crystal.wav');
   gameover = loadImage('imagens/assets/game-over.png');
   passaFase = loadSound('sons/winner.mp3');
-  somEntrada = loadSound('sons/entrada.mp3');
+  somEntrada = loadSound('sons/intro-grito.mp3');
   somPerdeVida = loadSound('sons/hit.wav');
   somGanhaVida = loadSound('sons/vida.wav');
   somVitoria = loadSound('sons/final.ogg');
