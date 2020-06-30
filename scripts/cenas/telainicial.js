@@ -30,7 +30,7 @@ class TelaInicial {
     fill(color('#000'));
     textAlign(CENTER,CENTER);
     textSize(20);
-    let aChar = "CONTROLES:\n ARROW UP TO JUMP\n ARROW UP (2x) DOUBLE JUMP \n  ARROW LEFT TO WALK LEFT\n ARROW RIGHT TO WALK RIGHT";
+    let aChar = "";
     let cWidth = textWidth(aChar);
     text(aChar,width/2,(height/9)*8);
     
