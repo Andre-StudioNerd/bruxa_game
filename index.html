@@ -1,62 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="p5.collide2d.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
-
+    <title>Hipsta - Tiago Jaques</title>
   </head>
+
   <body>
-    <script src="p5.js"></script>
-    <script src="p5.collide2d.min.js"></script>
-    <script src="p5.sound.min.js"></script>
-    
-    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    <script src="scripts/variaveis.js"></script>
+    <script src="scripts/funcoes.js"></script>
+    <script src="scripts/preload.js"></script>
 
-  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="firebase-app.js"></script>
+    <script src="scripts/cenas/jogo.js"></script>
+    <script src="scripts/cenas/telainicial.js"></script>
+    <script src="scripts/cenas/botaoGerenciador.js"></script>
+    <script src="scripts/cenas/botaoPassaFase.js"></script>
 
-  <!-- Add Firebase products that you want to use -->
-  <script src="firebase-auth.js"></script>
-  <script src="firebase-firestore.js"></script>
-    
-     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyA_N_5xA_XMr1kLIqewKqSrFFmtB3LMKQs",
-    authDomain: "into-the-woods-6990a.firebaseapp.com",
-    databaseURL: "https://into-the-woods-6990a.firebaseio.com",
-    projectId: "into-the-woods-6990a",
-    storageBucket: "into-the-woods-6990a.appspot.com",
-    messagingSenderId: "1061275502769",
-    appId: "1:1061275502769:web:37514f431c261a030cba90",
-    measurementId: "G-PMG7G7KYQ2"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
-    
-    
-    <script src="js/utils.js"></script>
-    <script src="js/game/rigidBody.js"></script>
-    <script src="js/game/platform.js"></script>
-    <script src="js/game/char.js"></script>
-    <script src="js/game/points.js"></script>
-    <script src="js/game/scenario.js"></script>
-    <script src="js/game/enemy.js"></script>
-    <script src="js/game/enemyWall.js"></script>
-    <script src="js/scenes/game.js"></script>
-    <script src="js/scenes/preGame.js"></script>
-    <script src="js/scenes/initScene.js"></script>
+    <script src="scripts/jogo/cenario.js"></script>
+    <script src="scripts/jogo/fases.js"></script>
+    <script src="scripts/jogo/splash.js"></script>
+    <script src="scripts/jogo/animacao.js"></script>
+    <script src="scripts/jogo/portal.js"></script>
+    <script src="scripts/jogo/personagem.js"></script>
+    <script src="scripts/jogo/inimigo.js"></script>
+    <script src="scripts/jogo/pontuacao.js"></script>
+    <script src="scripts/jogo/npc.js"></script>
+    <script src="scripts/jogo/coletaveis.js"></script>
+    <script src="scripts/jogo/vida.js"></script>
     <script src="sketch.js"></script>
-    
   
-
 </body></html>
