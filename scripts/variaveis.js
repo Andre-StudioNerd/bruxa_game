@@ -1,87 +1,79 @@
 let imagemCenario;
 let imagemPersonagem;
+let somDoGame;
+let cenario;
+let personagem;
+let inimigos = [];
 let imagemInimigo;
 let imagemInimigoGrande;
 let imagemInimigoVoador;
-let imagemGameOver;
-let imagemTelaInicial;
-let fonteTelaInicial
-let somDoPulo;
+let imagemCoracao;
+let fonteInicio;
+let gameOver;
+let somGameOver;
+let somPulo;
+let somPerderVida;
 let jogo;
-
-let cenaAtual = 'telaInicial';
-let cenas;
+let HomemAranha;
 let telaInicial;
+let vidas;
+let heart;
+let heartVazio;
+
+let fonteJogo;
+
+let speedJogo = 40;
+
+let fita;
+
 let botaoGerenciador;
 
-let cenario;
-let somDoJogo;
-let personagem;
-let inimigo;
-let inimigoGrande;
-let inimigoVoador;
-let pontuacao;
+let cenas;
+let cenaAtual = "telaInicial";
 
+let pontuacao;
 const matrizInimigo = [
   [0, 0],
-  [104, 0],
-  [208, 0],
-  [312, 0],
+  [105, 0],
+  [210, 0],
+  [315, 0],
   [0, 104],
-  [104, 104],
-  [208, 104],
-  [312, 104],
+  [105, 104],
+  [210, 104],
+  [315, 104],
   [0, 208],
-  [104, 208],
-  [208, 208],
-  [312, 208],
+  [105, 208],
+  [210, 208],
+  [315, 208],
   [0, 312],
-  [104, 312],
-  [208, 312],
-  [312, 312],
-  [0, 418],
-  [104, 418],
-  [208, 418],
-  [312, 418],
-  [0, 522],
-  [104, 522],
-  [208, 522],
-  [312, 522],
-  [0, 626],
-  [104, 626],
-  [208, 626],
-  [312, 626],
-]
-const matrizPersonagem = [
-  [0, 0],
-  [220, 0],
-  [440, 0],
-  [660, 0],
-  [0, 270],
-  [220, 270],
-  [440, 270],
-  [660, 270],
-  [0, 540],
-  [220, 540],
-  [440, 540],
-  [660, 540],
-  [0, 810],
-  [220, 810],
-  [440, 810],
-  [660, 810],
+  [105, 312],
+  [210, 312],
+  [315, 312],
+  [0, 409],
+  [105, 409],
+  [210, 409],
+  [315, 409],
+  [0, 503],
+  [105, 503],
+  [210, 503],
+  [315, 503],
+  [0, 609],
+  [105, 609],
+  [210, 609],
+  [315, 609],
 ]
 const matrizInimigoGrande = [
-  [0, 0],
-  [400, 0],
-  [800, 0],
-  [1200, 0],
-  [1600, 0],
-  [0, 400],
-  [400, 400],
-  [800, 400],
+  [0,0],
+  [400,0],
+  [800,0],
+  [1200,0],
+  [1600,0],
+  [0,400],
+  [400,400],
+  [800,400],
   [1200, 400],
   [1600, 400],
-  [0, 800],
+  [0,800],
   [400, 800],
   [800, 800],
   [1200, 800],
@@ -90,7 +82,7 @@ const matrizInimigoGrande = [
   [400, 1200],
   [800, 1200],
   [1200, 1200],
-  [1600, 1200],
+  [1600, 1200], 
   [0, 1600],
   [400, 1600],
   [800, 1600],
@@ -98,10 +90,10 @@ const matrizInimigoGrande = [
   [1600, 1600],
   [0, 2000],
   [400, 2000],
-  [800, 2000],
+  [800, 2000]
 ]
 const matrizInimigoVoador = [
-  [0, 0],
+  [0,0],
   [200, 0],
   [400, 0],
   [0, 150],
@@ -118,5 +110,24 @@ const matrizInimigoVoador = [
   [400, 600],
   [0, 750],
 ]
+const matrizPersonagem = [
+      [0, 0],
+      [220, 0],
+      [440, 0],
+      [660, 0],
+      [0, 270],
+      [220, 270],
+      [440, 270],
+      [660, 270],
+      [0, 540],
+      [220, 540],
+      [440, 540],
+      [660, 540],
+      [0, 810],
+      [220, 810],
+      [440, 810],
+      [660, 810],
+    ]
 
-const inimigos = []
+
+
