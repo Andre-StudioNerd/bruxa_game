@@ -25,14 +25,14 @@ class TelaInicial {
     textAlign(CENTER,CENTER);
     text('',width/2,(height/5)*1.5+60);
     
-    strokeWeight(3);
-    image(controles, width/2-50,(height/11)*7.8, 100, 75);
-    fill(color('#000'));
-    textAlign(CENTER,CENTER);
-    textSize(20);
-    let aChar = "";
-    let cWidth = textWidth(aChar);
-    text(aChar,width/2,(height/9)*8);
+    //strokeWeight(3);
+   // image(controles, width/2-50,(height/11)*7.8, 100, 75);
+    //fill(color('#000'));
+    //textAlign(CENTER,CENTER);
+    //textSize(20);
+    //let aChar = "";
+   // let cWidth = textWidth(aChar);
+   // text(aChar,width/2,(height/9)*8);
     
     
   }
