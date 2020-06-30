@@ -1,6 +1,6 @@
 function preload() {
   /*** TELA INICIAL - SPLASH ***/
-  imagemSplash = loadImage('imagens/cenario/splash/background.png');
+  //imagemSplash = loadImage('imagens/cenario/splash/background.png');
   controles = loadImage('imagens/cenario/splash/arrows.png');
   imagemTelaInicial = loadImage('imagens/cenario/telavs.png');
   fontPrincipal = loadFont('imagens/assets/fonteTelaInicial.otf');
