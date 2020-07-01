@@ -1,6 +1,6 @@
 function preload() {
   /*** TELA INICIAL - SPLASH ***/
-  imagemSplash = loadImage('imagens/cenario/splash/background.png');
+  imagemSplash = loadImage('imagens/cenario/fundo_game.png');
   //controles = loadImage('imagens/cenario/splash/arrows.png');
   imagemTelaInicial = loadImage('imagens/cenario/telavs.png');
   fontPrincipal = loadFont('imagens/assets/fonteTelaInicial.otf');
@@ -41,7 +41,7 @@ function preload() {
 
   fita = loadJSON('fita/fita.json');
 
-  imagemCenario1 = loadImage('imagens/cenario/fase01/7.png');
+  imagemCenario1 = loadImage('imagens/cenario/fundo_game.png');
   imagemCenario2 = loadImage('imagens/cenario/fase01/6.png');
   imagemCenario3 = loadImage('imagens/cenario/fase01/5.png');
   imagemCenario4 = loadImage('imagens/cenario/fase01/4.png');
