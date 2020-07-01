@@ -22,7 +22,7 @@ function preload() {
   gc = loadSound('sons/crystal.wav');
   gameover = loadImage('imagens/assets/game-over.png');
   passaFase = loadSound('sons/winner.mp3');
-  somEntrada = loadSound('sons/vaiseiya.mp3');
+  somEntrada = loadSound('sons/telainicial.mp3');
   somPerdeVida = loadSound('sons/hit.wav');
   somGanhaVida = loadSound('sons/vida.wav');
   somVitoria = loadSound('sons/final.ogg');
