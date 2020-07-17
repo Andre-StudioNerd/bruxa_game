@@ -57,7 +57,7 @@ class Personagem extends Animacao {
     return(colisao);
   }
 
-  Naoanda(direcao) {
+  anda(direcao) {
 
     if (direcao === 1) {
       if (this.x < windowWidth-this.largura) {
